@@ -40,4 +40,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run LS command
-        run: ls-laS
+        run: ls -la
