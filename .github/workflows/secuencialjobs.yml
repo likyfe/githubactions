@@ -1,0 +1,18 @@
+name: secuencialjobs
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+    job1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Job 1
+          run: echo "Ejecutando Job 1 - secuencialjobs"
+
+    job2:
+      needs: job1
+      runs-on: ubuntu-latest
+      steps:
+        - name: Job 2
+          run: echo "Job 2 se ejecuta después del Job 1"
